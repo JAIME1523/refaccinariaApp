@@ -14,17 +14,15 @@ class RefacionariaPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-        create: (_) => RefacionariaProvider(),
-        child: _ContainerRefacionaria(spareparts: spareparts));
+        create: (_) => RefacionariaProvider(spareparts),
+        child: const _ContainerRefacionaria());
   }
 }
 
 class _ContainerRefacionaria extends StatelessWidget {
-  const _ContainerRefacionaria({
-    required this.spareparts,
-  });
+  const _ContainerRefacionaria();
 
-  final Refaccionaria spareparts;
+  // final Refaccionaria spareparts;
 
   @override
   Widget build(BuildContext context) {
@@ -38,28 +36,30 @@ class _ContainerRefacionaria extends StatelessWidget {
       ),
       body: SafeArea(
           child: ListView(
-            padding: const EdgeInsets.symmetric(horizontal: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 10),
         children: [
-          const Text('Datos de la refac'),
-          RowCustom(text1: 'identificador', text2: spareparts.identificador),
-          RowCustom(text1: 'Domicilio', text2: spareparts.domicilio),
-          RowCustom(text1: 'Nivel', text2: spareparts.nivelVenatas),
-          RowCustom(text1: 'descuento', text2: spareparts.descuento.toString()),
-
+          // const Text('Datos de la refac'),
+          const SizedBox(
+            height: 20,
+          ),
+          RowCustom(
+              text1: 'identificador',
+              text2: refacProvider.spareparts!.identificador),
+          RowCustom(
+              text1: 'Domicilio', text2: refacProvider.spareparts!.domicilio),
+          RowCustom(
+              text1: 'Nivel', text2: refacProvider.spareparts!.nivelVenatas),
+          RowCustom(
+              text1: 'descuento',
+              text2: refacProvider.spareparts!.descuento.toString()),
           refacProvider.viewStatus == ViewsStatus.talleres
-              ? TallerView(
-                  talleres: spareparts.listaTalleres!,
-                )
+              ? const TallerView()
               : refacProvider.viewStatus == ViewsStatus.empleados
-                  ? EmpleadoView(
-                      listaEmpleado: spareparts.listaEmpleado!,
-                    )
-                  : ProvedorView(
-                      listaProvedores: spareparts.listaProvedores!,
-                    )
+                  ? const EmpleadoView()
+                  : const ProvedorView()
         ],
       )),
-      bottomNavigationBar:const _Nav(),
+      bottomNavigationBar: const _Nav(),
     );
   }
 }

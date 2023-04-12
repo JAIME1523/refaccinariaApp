@@ -21,6 +21,21 @@ class _ContenidoHome extends StatelessWidget {
   Widget build(BuildContext context) {
     final homeProvider = Provider.of<HomeProvider>(context);
     return Scaffold(
+      appBar: AppBar(
+        title: const Center(
+            child: Text('Vista de refaccionaria',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold))),
+        actions: [
+          IconButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (_) => CreateRefaccionariaPage(homeProvider: homeProvider,)));
+              },
+              icon: Icon(Icons.add_box_outlined))
+        ],
+      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),
         child: SafeArea(
@@ -28,10 +43,6 @@ class _ContenidoHome extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 25),
           child: ListView(
             children: [
-              const Center(
-                  child: Text('Vista de refaccionaria',
-                      style: TextStyle(
-                          fontSize: 20, fontWeight: FontWeight.bold))),
               ...homeProvider.refaccionarias.map((e) => CustomCard(
                   widget: Row(
                     children: [
@@ -57,13 +68,11 @@ class _ContenidoHome extends StatelessWidget {
                           const Spacer(),
                           Text(e.nombre,
                               style: const TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold)),
+                                  fontSize: 18, fontWeight: FontWeight.bold)),
                           const Spacer(),
                           Text(e.nivelVenatas,
                               style: const TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold)),
+                                  fontSize: 18, fontWeight: FontWeight.bold)),
                           const Spacer(),
                         ],
                       )

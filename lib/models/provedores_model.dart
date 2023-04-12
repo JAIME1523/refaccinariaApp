@@ -7,9 +7,9 @@ class ProvedoreModel {
         required this.tipoProvedor,
     });
 
-    final int id;
-    final String nombre;
-    final String tipoProvedor;
+     int id;
+     String nombre;
+     String tipoProvedor;
 
     factory ProvedoreModel.fromJson(String str) => ProvedoreModel.fromMap(json.decode(str));
 

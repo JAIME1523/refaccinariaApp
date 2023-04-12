@@ -1,7 +1,7 @@
 final dataRefac = [
   {
     "id": 1,
-    "nombre": "Refaccionaria 'Tuercas'",
+    "nombre": "Refaccionaria California",
     "identificador": "1A",
     "domicilio": "rev av",
     "listaTalleres": [
@@ -12,16 +12,7 @@ final dataRefac = [
         "domicilio": "avsdasd",
         "tipo": "integral",
         "montoVnetas": 1000,
-        "encargado": {
-        "id": 1,
-        "nombre": "jaime",
-        "edad": 25,
-        "sexo": "hombre",
-        "nivel": "repartidor",
-        "NSS": "asdas",
-        "sueldo": 200,
-        "diaVacaciones": 2
-      },
+        "encargado": 'pedrito',
         "listaRefacciones": [
           {"id": 1, "nombre": "tuerca"}
         ]
@@ -33,16 +24,7 @@ final dataRefac = [
         "domicilio": "avsdasd",
         "tipo": "integral",
         "montoVnetas": 250,
-        "encargado": {
-        "id": 1,
-        "nombre": "jaime",
-        "edad": 25,
-        "sexo": "hombre",
-        "nivel": "repartidor",
-        "NSS": "asdas",
-        "sueldo": 200,
-        "diaVacaciones": 2
-      },
+        "encargado":'juanito',
         "listaRefacciones": [
           {"id": 1, "nombre": "tuerca"}
         ]
@@ -78,7 +60,7 @@ final dataRefac = [
   },
   {
     "id": 2,
-    "nombre": "Refaccionaria 'Tuercas'",
+    "nombre": "Refaccionaria California",
     "identificador": "2A",
     "domicilio": "rev av",
     "listaTalleres": [
@@ -89,16 +71,7 @@ final dataRefac = [
         "domicilio": "avsdasd",
         "tipo": "integral",
         "montoVnetas": 250,
-        "encargado": {
-        "id": 1,
-        "nombre": "jaime",
-        "edad": 25,
-        "sexo": "hombre",
-        "nivel": "repartidor",
-        "NSS": "asdas",
-        "sueldo": 200,
-        "diaVacaciones": 2
-      },
+        "encargado": "panchito",
         "listaRefacciones": [
           {"id": 1, "nombre": "tuerca"}
         ]
@@ -124,7 +97,7 @@ final dataRefac = [
   },
   {
     "id": 3,
-    "nombre": "Refaccionaria 'Tuercas'",
+    "nombre": "Refaccionaria California",
     "identificador": "3A",
     "domicilio": "chimalpita",
     "listaTalleres": [
@@ -135,16 +108,7 @@ final dataRefac = [
         "domicilio": "avsdasd",
         "tipo": "integral",
         "montoVnetas": 250,
-        "encargado": {
-        "id": 1,
-        "nombre": "jaime",
-        "edad": 25,
-        "sexo": "hombre",
-        "nivel": "repartidor",
-        "NSS": "asdas",
-        "sueldo": 200,
-        "diaVacaciones": 2
-      },
+        "encargado": 'juan',
         "listaRefacciones": [
           {"id": 1, "nombre": "tuerca"}
         ]

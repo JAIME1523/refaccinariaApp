@@ -11,7 +11,17 @@ class HomeProvider extends ChangeNotifier {
           dataRefac.map((x) => Refaccionaria.fromMap(x)));
       notifyListeners();
     } catch (e) {
-       '';
+      print(e);
+      '';
     }
+  }
+  addrefac(Refaccionaria refaccionaria) {
+    refaccionarias.add(refaccionaria);
+    notifyListeners();
+  }
+
+  delete(Refaccionaria refaccionaria) {
+    refaccionarias.remove(refaccionaria);
+    notifyListeners();
   }
 }

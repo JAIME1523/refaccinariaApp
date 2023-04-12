@@ -14,14 +14,14 @@ class TallerModel {
         required this.listaRefacciones,
     });
 
-    final int id;
-    final String nombre;
-    final String razonSocial;
-    final String domicilio;
-    final String tipo;
-    final int montoVnetas;
-    final EmpleadoModel? encargado;
-    final List<RefaccionesModel> listaRefacciones;
+     int id;
+     String nombre;
+     String razonSocial;
+     String domicilio;
+     String tipo;
+     dynamic montoVnetas;
+     dynamic encargado;
+     List<RefaccionesModel> listaRefacciones;
 
     factory TallerModel.fromJson(String str) => TallerModel.fromMap(json.decode(str));
 
@@ -34,7 +34,7 @@ class TallerModel {
         domicilio: json["domicilio"],
         tipo: json["tipo"],
         montoVnetas: json["montoVnetas"],
-        encargado: EmpleadoModel.fromMap(json["encargado"]),
+        encargado:json["encargado"],
         listaRefacciones: List<RefaccionesModel>.from(json["listaRefacciones"].map((x) => RefaccionesModel.fromMap(x))),
     );
 
@@ -45,7 +45,7 @@ class TallerModel {
         "domicilio": domicilio,
         "tipo": tipo,
         "montoVnetas": montoVnetas,
-        "encargado": encargado!.toMap(),
+        "encargado": encargado,
         "listaRefacciones": List<dynamic>.from(listaRefacciones.map((x) => x.toMap())),
     };
 }

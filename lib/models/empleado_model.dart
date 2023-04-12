@@ -12,14 +12,14 @@ class EmpleadoModel {
         required this.diaVacaciones,
     });
 
-    final int id;
-    final String nombre;
-    final int edad;
-    final String sexo;
-    final String nivel;
-    final String nss;
-    final int sueldo;
-    final int diaVacaciones;
+     int id;
+     String nombre;
+     int edad;
+     String sexo;
+     String nivel;
+     String nss;
+     dynamic sueldo;
+     dynamic diaVacaciones;
 
     factory EmpleadoModel.fromJson(String str) => EmpleadoModel.fromMap(json.decode(str));
 

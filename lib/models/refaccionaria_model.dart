@@ -36,15 +36,15 @@ class Refaccionaria {
         required this.descuento,
     });
 
-    final int id;
-    final String nombre;
-    final String identificador;
-    final String domicilio;
-    final List<TallerModel>? listaTalleres;
-    final List<EmpleadoModel>? listaEmpleado;
-    final List<ProvedoreModel>? listaProvedores;
-    final String nivelVenatas;
-    final int descuento;
+     int id;
+     String nombre;
+     String identificador;
+     String domicilio;
+     List<TallerModel>? listaTalleres;
+     List<EmpleadoModel>? listaEmpleado;
+     List<ProvedoreModel>? listaProvedores;
+     String nivelVenatas;
+     dynamic descuento;
 
     factory Refaccionaria.fromJson(String str) => Refaccionaria.fromMap(json.decode(str));
 

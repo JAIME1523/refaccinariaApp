@@ -6,7 +6,9 @@ class CustomCardDetalle extends StatelessWidget {
     required this.widget,
     this.height = 230,
     this.onTap,
-    this.text = 'info', required this.eliminar,
+    this.text = 'info',
+    required this.eliminar,
+    this.mostrar= true,
   });
 
   final Widget widget;
@@ -15,7 +17,7 @@ class CustomCardDetalle extends StatelessWidget {
 
   final double? height;
   final String? text;
-
+  final bool mostrar ;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -45,10 +47,11 @@ class CustomCardDetalle extends StatelessWidget {
           child: Column(
             children: [
               Expanded(child: widget),
-              Container(
+          mostrar ?     Container(
                 decoration: BoxDecoration(
-                   border:  Border.all(color: Colors.white,)
-                ),
+                    border: Border.all(
+                  color: Colors.white,
+                )),
                 width: double.infinity,
                 height: 30,
                 child: Row(
@@ -59,9 +62,16 @@ class CustomCardDetalle extends StatelessWidget {
                     const Icon(Icons.arrow_forward_ios),
                   ],
                 ),
-              
-              ),
-             IconButton(onPressed: (){}, icon: const Icon(Icons.delete_forever, color: Colors.red,size: 35,))
+              ): Container(),
+              IconButton(
+                  onPressed: () {
+                    eliminar();
+                  },
+                  icon: const Icon(
+                    Icons.delete_forever,
+                    color: Colors.red,
+                    size: 35,
+                  ))
             ],
           )),
     );
