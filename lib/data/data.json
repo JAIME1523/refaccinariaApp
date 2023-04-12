@@ -1,0 +1,12 @@
+
+
+{
+    "id":1,
+    "nombre":"jaime",
+    "edad":25,
+    "sexo":"hombre",
+    "nivel": "repartidor",
+    "NSS": "asdas",
+    "sueldo": 200,
+    "diaVacaciones": 2
+}
