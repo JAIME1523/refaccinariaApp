@@ -14,7 +14,6 @@ class TallerFormProvider extends ChangeNotifier {
   GlobalKey<FormState> fromKey = GlobalKey<FormState>();
 
   validateFrom() {
-    print(newTaller!.nombre);
     if (fromKey.currentState!.validate()) {
       return true;
     } else {

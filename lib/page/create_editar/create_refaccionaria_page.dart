@@ -17,7 +17,7 @@ class CreateRefaccionariaPage extends StatelessWidget {
 
         return Scaffold(
           appBar: AppBar(
-            title: const Text('Agregar provedor'),
+            title: const Text('Agregar refaccionaria'),
           ),
           body: Form(
             key: formProvder.fromKey,

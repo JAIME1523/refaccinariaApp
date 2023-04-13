@@ -33,7 +33,7 @@ class _ContenidoHome extends StatelessWidget {
                     MaterialPageRoute(
                         builder: (_) => CreateRefaccionariaPage(homeProvider: homeProvider,)));
               },
-              icon: Icon(Icons.add_box_outlined))
+              icon: const Icon(Icons.add_box_outlined))
         ],
       ),
       body: Padding(

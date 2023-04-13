@@ -38,6 +38,7 @@ class TallerView extends StatelessWidget {
                       eliminar: () {
                         refacProvider.deleteTaller(taller);
                       },
+                      mostrar: false,
                       onTap: () {},
                       text: 'Refacciones',
                       widget: Column(

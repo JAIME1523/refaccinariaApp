@@ -3,13 +3,13 @@ final dataRefac = [
     "id": 1,
     "nombre": "Refaccionaria California",
     "identificador": "1A",
-    "domicilio": "rev av",
+    "domicilio": "revolución",
     "listaTalleres": [
       {
         "id": 1,
-        "nombre": "taller1",
-        "razon social": "asdasddasadsads",
-        "domicilio": "avsdasd",
+        "nombre": "taller-1",
+        "razon social": "Ser el mejor taller",
+        "domicilio": "La concita",
         "tipo": "integral",
         "montoVnetas": 1000,
         "encargado": 'pedrito',
@@ -19,9 +19,9 @@ final dataRefac = [
       },
        {
         "id": 2,
-        "nombre": "taller2",
-        "razon social": "asdasddasadsads",
-        "domicilio": "avsdasd",
+        "nombre": "taller-2",
+        "razon social": "Ser el segundo mejor",
+        "domicilio": "Morelos",
         "tipo": "integral",
         "montoVnetas": 250,
         "encargado":'juanito',
@@ -33,11 +33,11 @@ final dataRefac = [
     "listaEmpleado": [
       {
         "id": 1,
-        "nombre": "jaime",
+        "nombre": "Empleado1",
         "edad": 25,
         "sexo": "hombre",
         "nivel": "gerentes de piso",
-        "NSS": "asdas",
+        "NSS": "16772asdd",
         "sueldo": 200,
         "diaVacaciones": 2
       },
@@ -58,78 +58,5 @@ final dataRefac = [
     "nivelVenatas": "Cobre",
     "descuento": 3
   },
-  {
-    "id": 2,
-    "nombre": "Refaccionaria California",
-    "identificador": "2A",
-    "domicilio": "rev av",
-    "listaTalleres": [
-      {
-        "id": 1,
-        "nombre": "taller1",
-        "razon social": "asdasddasadsads",
-        "domicilio": "avsdasd",
-        "tipo": "integral",
-        "montoVnetas": 250,
-        "encargado": "panchito",
-        "listaRefacciones": [
-          {"id": 1, "nombre": "tuerca"}
-        ]
-      }
-    ],
-    "listaEmpleado": [
-      {
-        "id": 1,
-        "nombre": "jaime",
-        "edad": 25,
-        "sexo": "hombre",
-        "nivel": "repartidor",
-        "NSS": "asdas",
-        "sueldo": 200,
-        "diaVacaciones": 2
-      }
-    ],
-    "listaProvedores": [
-      {"id": 1, "nombre": "pedrito", "tipoProvedor": "accesorios"}
-    ],
-    "nivelVenatas": "Plata",
-    "descuento": 8
-  },
-  {
-    "id": 3,
-    "nombre": "Refaccionaria California",
-    "identificador": "3A",
-    "domicilio": "chimalpita",
-    "listaTalleres": [
-      {
-        "id": 1,
-        "nombre": "taller1",
-        "razon social": "asdasddasadsads",
-        "domicilio": "avsdasd",
-        "tipo": "integral",
-        "montoVnetas": 250,
-        "encargado": 'juan',
-        "listaRefacciones": [
-          {"id": 1, "nombre": "tuerca"}
-        ]
-      }
-    ],
-    "listaEmpleado": [
-      {
-        "id": 1,
-        "nombre": "jaime",
-        "edad": 25,
-        "sexo": "hombre",
-        "nivel": "repartidor",
-        "NSS": "asdas",
-        "sueldo": 200,
-        "diaVacaciones": 2
-      }
-    ],
-    "listaProvedores": [
-      {"id": 1, "nombre": "juanito tuercas", "tipoProvedor": "accesorios"}
-    ],
-    "nivelVenatas": "Oro",
-    "descuento": 15
-  }
+
 ];
